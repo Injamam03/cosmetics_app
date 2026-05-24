@@ -100,7 +100,7 @@ class HomeScreen extends StatelessWidget {
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 padding: EdgeInsets.symmetric(horizontal: 16.w),
-                children: [
+                children: const [
                   _CategoryChip(icon: Icons.brush_outlined, label: Constring.homeCategoryMakeup),
                   _CategoryChip(icon: Icons.spa_outlined, label: Constring.homeCategorySkincare),
                   _CategoryChip(icon: Icons.air_outlined, label: Constring.homeCategoryFragrance),
