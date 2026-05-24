@@ -9,6 +9,7 @@ class AppRoutes {
   static const String signUp = '/sign-up';
   static const String otpVerify = '/otp-verify';
   static const String forgotPassword = '/forgot-password';
+  static const String forgotPasswordOtpScreen = '/forgotPasswordOtpScreen';
   static const String createNewPassword = '/create-new-password';
   static const String accountSuccess = '/account-success';
 

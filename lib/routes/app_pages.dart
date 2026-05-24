@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import '../screens/authScreens/forgotPasswordOtpScreen/forgotPasswordOtpScreen.dart';
 import '../screens/authScreens/splashScreen/splash_screen.dart';
 import '../screens/authScreens/onboardingScreen/onboarding_screen.dart';
 import '../screens/authScreens/chooseRoleScreen/choose_role_screen.dart';
@@ -40,6 +41,7 @@ class AppPages {
     GetPage(name: AppRoutes.signUp, page: () => const SignUpScreen()),
     GetPage(name: AppRoutes.otpVerify, page: () => const OtpVerifyScreen()),
     GetPage(name: AppRoutes.forgotPassword, page: () => const ForgotPasswordScreen()),
+    GetPage(name: AppRoutes.forgotPasswordOtpScreen, page: () => const ForgotPasswordOtpScreen()),
     GetPage(name: AppRoutes.createNewPassword, page: () => const CreateNewPasswordScreen()),
     GetPage(name: AppRoutes.accountSuccess, page: () => const AccountSuccessScreen()),
 

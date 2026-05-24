@@ -16,11 +16,9 @@ class ForgotPasswordScreen extends StatelessWidget {
   Widget build(BuildContext context) {
 
     final controller = Get.put(ForgotPasswordController());
-    // final emailController = TextEditingController();
-    // final formKey = GlobalKey<FormState>();
 
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: AppColors.surface,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
