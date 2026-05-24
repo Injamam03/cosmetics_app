@@ -16,21 +16,19 @@ class ChooseRoleScreen extends StatelessWidget {
     final c = Get.put(ChooseRoleController());
     return Scaffold(
       backgroundColor: AppColors.background,
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.only(bottom: 60,left: 20,right: 20),
+        child: Obx(() => CustomButton(
+          text: Constring.roleContinue,
+          onTap: c.selectedRole.value.isNotEmpty ? c.onContinue : null,
+        )),
+      ),
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20.w),
+          padding: EdgeInsets.symmetric(horizontal: 20.w,vertical: 180),
           child: Column(
             children: [
-              SizedBox(height: 24.h),
-              CustomText(
-                text: Constring.appName,
-                style: AppTextStyles.labelMd.copyWith(
-                  color: AppColors.primary,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              SizedBox(height: 48.h),
-              CustomText(
+              const CustomText(
                 text: Constring.chooseRoleTitle,
                 style: AppTextStyles.headlineLgMobile,
                 textAlign: TextAlign.center,
@@ -41,6 +39,12 @@ class ChooseRoleScreen extends StatelessWidget {
                 style: AppTextStyles.bodyMd.copyWith(
                   color: AppColors.onSurfaceVariant,
                 ),
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(height: 8.h),
+              const CustomText(
+                text: Constring.selectYourRole,
+                style: AppTextStyles.headlineMd,
                 textAlign: TextAlign.center,
               ),
               SizedBox(height: 40.h),
@@ -60,10 +64,7 @@ class ChooseRoleScreen extends StatelessWidget {
                     onTap: () => c.selectRole('seller'),
                   )),
               const Spacer(),
-              Obx(() => CustomButton(
-                    text: Constring.roleContinue,
-                    onTap: c.selectedRole.value.isNotEmpty ? c.onContinue : null,
-                  )),
+
               SizedBox(height: 24.h),
             ],
           ),
@@ -105,7 +106,7 @@ class _RoleCard extends StatelessWidget {
           ),
           boxShadow: [
             BoxShadow(
-              color: AppColors.onBackground.withOpacity(0.04),
+              color: AppColors.onBackground.withAlpha(8),
               blurRadius: 30,
             ),
           ],

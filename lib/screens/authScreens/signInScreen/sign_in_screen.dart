@@ -20,30 +20,32 @@ class SignInScreen extends StatelessWidget {
       body: Stack(
         children: [
           // Background blobs
-          Positioned(
-            top: -80.h,
-            right: -40.w,
-            child: Container(
-              width: 280.w,
-              height: 320.h,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: AppColors.secondaryContainer.withOpacity(0.2),
-              ),
-            ),
-          ),
-          Positioned(
-            bottom: -80.h,
-            left: -40.w,
-            child: Container(
-              width: 240.w,
-              height: 280.h,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: AppColors.primaryFixed.withAlpha(20),
-              ),
-            ),
-          ),
+          // Positioned(
+          //   top: -80.h,
+          //   right: -40.w,
+          //   child: Container(
+          //     width: 280.w,
+          //     height: 320.h,
+          //     decoration: BoxDecoration(
+          //       shape: BoxShape.circle,
+          //       color: AppColors.secondaryContainer.withAlpha(20),
+          //     ),
+          //   ),
+          // ),
+
+          /// =-==-=-=--=-==-=-= commit test -=-=-=-=--===-==-//
+          // Positioned(
+          //   bottom: -80.h,
+          //   left: -40.w,
+          //   child: Container(
+          //     width: 240.w,
+          //     height: 280.h,
+          //     decoration: BoxDecoration(
+          //       shape: BoxShape.circle,
+          //       color: AppColors.primaryFixed.withAlpha(20),
+          //     ),
+          //   ),
+          // ),
           SafeArea(
             child: SingleChildScrollView(
               padding: EdgeInsets.symmetric(horizontal: 20.w),
@@ -52,18 +54,18 @@ class SignInScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    SizedBox(height: 60.h),
-                    // Quote
-                    CustomText(
-                      text: Constring.appTagline,
-                      style: AppTextStyles.labelSm.copyWith(
-                        color: AppColors.onSurfaceVariant,
-                        fontStyle: FontStyle.italic,
-                      ),
-                    ),
+                    // SizedBox(height: 60.h),
+                    // // Quote
+                    // CustomText(
+                    //   text: Constring.appTagline,
+                    //   style: AppTextStyles.labelSm.copyWith(
+                    //     color: AppColors.onSurfaceVariant,
+                    //     fontStyle: FontStyle.italic,
+                    //   ),
+                    // ),
                     SizedBox(height: 32.h),
-                    CustomText(
-                      text: Constring.signInTitle,
+                    const CustomText(
+                      text: Constring.welcomeBack,
                       style: AppTextStyles.headlineLgMobile,
                     ),
                     SizedBox(height: 8.h),
@@ -80,7 +82,9 @@ class SignInScreen extends StatelessWidget {
                       prefixIcon: Icons.mail_outline,
                       keyboardType: TextInputType.emailAddress,
                       validator: (v) {
-                        if (v == null || v.isEmpty) return Constring.validationRequired;
+                        if (v == null || v.isEmpty) {
+                          return Constring.validationRequired;
+                        }
                         if (!v.contains('@')) return Constring.validationEmail;
                         return null;
                       },
@@ -96,8 +100,12 @@ class SignInScreen extends StatelessWidget {
                               : Icons.visibility_off_outlined,
                           onSuffixTap: c.togglePassword,
                           validator: (v) {
-                            if (v == null || v.isEmpty) return Constring.validationRequired;
-                            if (v.length < 8) return Constring.validationPassword;
+                            if (v == null || v.isEmpty) {
+                              return Constring.validationRequired;
+                            }
+                            if (v.length < 8) {
+                              return Constring.validationPassword;
+                            }
                             return null;
                           },
                         )),
@@ -124,7 +132,8 @@ class SignInScreen extends StatelessWidget {
                     // Divider
                     Row(
                       children: [
-                        Expanded(child: Divider(color: AppColors.outlineVariant)),
+                        const Expanded(
+                            child: Divider(color: AppColors.outlineVariant)),
                         Padding(
                           padding: EdgeInsets.symmetric(horizontal: 12.w),
                           child: CustomText(
@@ -134,7 +143,8 @@ class SignInScreen extends StatelessWidget {
                             ),
                           ),
                         ),
-                        Expanded(child: Divider(color: AppColors.outlineVariant)),
+                       const Expanded(
+                            child: Divider(color: AppColors.outlineVariant)),
                       ],
                     ),
                     SizedBox(height: 24.h),

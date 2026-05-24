@@ -58,7 +58,7 @@ class AppTextStyles {
 
   static const TextStyle labelMd = TextStyle(
     fontFamily: _body,
-    fontSize: 14,
+    fontSize: 16,
     fontWeight: FontWeight.w600,
     height: 1.2,
     letterSpacing: 0.7,

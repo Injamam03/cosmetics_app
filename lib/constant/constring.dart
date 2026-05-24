@@ -3,7 +3,7 @@ class Constring {
 
   // ─── App ───────────────────────────────────────────────
   static const String appName = 'Cosmetics App';
-  static const String appTagline = '"Beauty is being comfortable in your own skin."';
+  // static const String appTagline = '"Beauty is being comfortable in your own skin."';
 
   // ─── Splash ────────────────────────────────────────────
   static const String splashTitle = 'Cosmetics App';
@@ -11,9 +11,9 @@ class Constring {
 
   // ─── Onboarding ────────────────────────────────────────
   static const String onboardingBadge = '100% Organic & Dermatologically Tested';
-  static const String onboardingHeadline = 'Discover Your\nGlow';
-  static const String onboardingFeature1 = 'Premium Brands';
-  static const String onboardingFeature2 = 'AI Tailored';
+  static const String discoverYourGlow = 'Discover Your Glow';
+  static const String onBoardingSubTitle01 = 'Your skin deserves the best. \nDiscover products that bring out your natural radiance.';
+  static const String onBoardingSubTitle02 = 'Buy & sell the cosmetics \nthat make you feel unstoppable.';
   static const String onboardingSkip = 'Skip';
   static const String onboardingGetStarted = 'Get Started';
 
@@ -25,9 +25,11 @@ class Constring {
   static const String roleSeller = 'Sell Products';
   static const String roleSellerSub = 'List & manage your beauty products';
   static const String roleContinue = 'Continue';
+  static const String selectYourRole = 'Select Your Role';
+
 
   // ─── Sign In ───────────────────────────────────────────
-  static const String signInTitle = 'Welcome Back';
+  static const String welcomeBack = 'Welcome Back';
   static const String signInSubtitle = 'Sign in to continue your beauty journey.';
   static const String signInEmail = 'Email Address';
   static const String signInPassword = 'Password';
