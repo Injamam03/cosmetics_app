@@ -17,7 +17,7 @@ class SignInScreen extends StatelessWidget {
     final c = Get.put(SignInController());
     return Scaffold(
       backgroundColor: AppColors.surface,
-      body: Stack(
+      body: Column(
         children: [
           // Background blobs
           // Positioned(
@@ -48,7 +48,7 @@ class SignInScreen extends StatelessWidget {
           // ),
           SafeArea(
             child: SingleChildScrollView(
-              padding: EdgeInsets.symmetric(horizontal: 20.w),
+              padding: EdgeInsets.symmetric(horizontal: 20.w,vertical: 150),
               child: Form(
                 key: c.formKey,
                 child: Column(
@@ -64,15 +64,23 @@ class SignInScreen extends StatelessWidget {
                     //   ),
                     // ),
                     SizedBox(height: 32.h),
-                    const CustomText(
-                      text: Constring.welcomeBack,
-                      style: AppTextStyles.headlineLgMobile,
+                    const Align(
+                      alignment: Alignment.center,
+                      child: CustomText(
+                        text: Constring.welcomeBack,
+                        style: AppTextStyles.headlineLgMobile,
+
+                      ),
                     ),
+
                     SizedBox(height: 8.h),
-                    CustomText(
-                      text: Constring.signInSubtitle,
-                      style: AppTextStyles.bodyMd.copyWith(
-                        color: AppColors.onSurfaceVariant,
+                    Align(
+                      alignment: Alignment.center,
+                      child: CustomText(
+                        text: Constring.signInSubtitle,
+                        style: AppTextStyles.bodyMd.copyWith(
+                          color: AppColors.onSurfaceVariant,
+                        ),
                       ),
                     ),
                     SizedBox(height: 40.h),
