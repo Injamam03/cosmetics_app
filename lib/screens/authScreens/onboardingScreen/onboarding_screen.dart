@@ -13,6 +13,8 @@
     const OnboardingScreen({super.key});
 
     @override
+
+
     Widget build(BuildContext context) {
       final c = Get.put(OnboardingController());
       return Scaffold(
@@ -81,11 +83,11 @@
 
                 // Illustration placeholder
                 Container(
-                  // height: 240.h,
+                  height: 320.h,  // 👈 এটা add করো
                   width: double.infinity,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(16.r),
-                    border: Border.all(color: AppColors.primaryContainer.withAlpha(20),width: 2),
+                    border: Border.all(color: AppColors.primaryContainer.withAlpha(20), width: 2),
                     gradient: LinearGradient(
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
@@ -95,12 +97,18 @@
                       ],
                     ),
                   ),
-                  // child: Icon(Icons.spa_outlined, size: 80.sp, color: AppColors.primary.withAlpha(60)),
-                  child: Image.asset(
-                    ImageString.onBoardingImag,
-                    fit: BoxFit.cover,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(16.r),
+                    child: Image.asset(
+                      ImageString.onBoardingImag,
+                      fit: BoxFit.cover,
+                      width: double.infinity,
+                      height: 320.h,
+                    ),
                   ),
-                ),SizedBox(height: 20.h),
+                ),
+
+                SizedBox(height: 20.h),
                 // Illustration placeholder
                 Container(
                   // height: 240.h,
